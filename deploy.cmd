@@ -65,6 +65,13 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
+:: 2. Check if WebConfig File exists
+IF EXIST %DEPLOYMENT_SOURCE%/web.config (
+  cp %DEPLOYMENT_SOURCE%/web.config %DEPLOYMENT_TARGET%/web.config
+) ELSE (
+  echo You Dont use Web.Config
+)
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :: Post deployment stub
