@@ -1,6 +1,6 @@
 # Jekyll Azure Deploy
 
-Deployment files for building Jekyll on Azure Web Apps.
+Deployment files for building Jekyll on a Windows backed Azure Web Apps instance.
 
 ## Installation
 
